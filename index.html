@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>愿力：从恐惧驱动到内在驱动的认知转型</title>
+<style>
+
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2333;--tx:#e6edf3;--tx2:#8b949e;--ac:#7c3aed;--ac2:#a78bfa;--bd:#30363d;--gn:#3fb950;--or:#d29922}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;display:flex;min-height:100vh}
+.side{width:260px;min-width:260px;background:var(--bg2);border-right:1px solid var(--bd);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;transition:transform .3s;padding:20px 0}
+.side-hd{padding:0 16px 16px;border-bottom:1px solid var(--bd);margin-bottom:8px}
+.side-hd h1{font-size:1.15rem;color:var(--ac2);letter-spacing:2px}
+.side-hd p{font-size:.72rem;color:var(--tx2);margin-top:3px}
+.toc a{display:block;padding:8px 16px;color:var(--tx2);text-decoration:none;font-size:.85rem;border-left:3px solid transparent;transition:all .2s}
+.toc a:hover,.toc a.cur{background:var(--bg3);color:var(--tx);border-left-color:var(--ac)}
+.lang-sw{padding:12px 16px;border-top:1px solid var(--bd);margin-top:8px;display:flex;gap:8px}
+.lang-sw a{padding:4px 12px;border-radius:4px;font-size:.78rem;text-decoration:none;color:var(--tx2);border:1px solid var(--bd)}
+.lang-sw a.act{background:var(--ac);color:#fff;border-color:var(--ac)}
+.main{margin-left:260px;flex:1;max-width:820px;padding:36px 44px 100px}
+h1{font-size:1.7rem;margin:28px 0 14px;color:var(--ac2);border-bottom:2px solid var(--bd);padding-bottom:8px}
+h2{font-size:1.3rem;margin:24px 0 10px;color:var(--tx)}
+h3{font-size:1.05rem;margin:18px 0 6px;color:var(--ac2)}
+p{margin:8px 0}
+hr{border:none;border-top:1px solid var(--bd);margin:24px 0}
+strong{color:#fff}
+em{color:var(--ac2);font-style:italic}
+code{background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:.86em;color:var(--or)}
+pre{background:var(--bg3);padding:14px;border-radius:7px;overflow-x:auto;margin:14px 0;border:1px solid var(--bd)}
+pre code{background:none;padding:0;color:var(--tx);font-size:.83rem}
+a{color:var(--ac2)}
+.tbl{overflow-x:auto;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{background:var(--bg3);color:var(--ac2);padding:8px 12px;text-align:left;border-bottom:2px solid var(--ac);font-weight:600}
+td{padding:7px 12px;border-bottom:1px solid var(--bd)}
+tr:hover td{background:rgba(124,58,237,.06)}
+ul{margin:8px 0 8px 22px}
+li{margin:3px 0}
+li::marker{color:var(--ac)}
+blockquote{border-left:4px solid var(--ac);padding:10px 18px;margin:14px 0;background:rgba(124,58,237,.08);border-radius:0 7px 7px 0;color:var(--tx2);font-style:italic}
+.mermaid{background:var(--bg2);padding:18px;border-radius:9px;margin:18px 0;border:1px solid var(--bd);text-align:center}
+.ch-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--bd)}
+.ch-nav a{color:var(--ac2);text-decoration:none;padding:6px 14px;border:1px solid var(--bd);border-radius:5px;font-size:.88rem;transition:all .2s}
+.ch-nav a:hover{background:var(--bg3);border-color:var(--ac)}
+.ham{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--bg2);border:1px solid var(--bd);color:var(--tx);padding:6px 10px;border-radius:5px;font-size:1.1rem;cursor:pointer}
+.num-item{margin:4px 0 4px 20px}
+@media(max-width:860px){.side{transform:translateX(-100%)}.side.open{transform:translateX(0)}.main{margin-left:0;padding:20px 16px 60px}.ham{display:block}h1{font-size:1.3rem}}
+
+.side{display:none}
+.main{margin-left:0;max-width:900px;margin:0 auto;padding:60px 40px}
+.hero{text-align:center;margin-bottom:48px}
+.hero h1{font-size:2.4rem;border:none;color:var(--ac2);margin-bottom:8px}
+.hero .sub{font-size:1rem;color:var(--tx2);margin-bottom:4px}
+.hero .sub2{font-size:.85rem;color:var(--tx2)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:32px 0}
+@media(max-width:700px){.cols{grid-template-columns:1fr}.hero h1{font-size:1.6rem}}
+.col h2{font-size:1.1rem;margin-bottom:12px;color:var(--ac2)}
+.col a{display:flex;align-items:center;gap:10px;padding:10px 14px;color:var(--tx2);text-decoration:none;border-radius:6px;margin:2px 0;transition:all .2s;font-size:.9rem}
+.col a:hover{background:var(--bg3);color:var(--tx)}
+.col a .num{color:var(--ac);font-weight:700;font-size:.8rem;min-width:22px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0}
+@media(max-width:700px){.pillars{grid-template-columns:1fr}}
+.pill{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:20px;text-align:center}
+.pill .icon{font-size:1.6rem;margin-bottom:6px}
+.pill h3{color:var(--ac2);font-size:.95rem;margin:4px 0}
+.pill p{color:var(--tx2);font-size:.8rem}
+.companion{background:var(--bg2);border:1px solid var(--bd);border-radius:10px;padding:24px;margin:40px 0;text-align:center}
+.companion p{color:var(--tx2);font-size:.88rem}
+.companion a{color:var(--ac2)}
+</style>
+</head>
+<body>
+<main class="main">
+<div class="hero">
+  <h1>愿 力</h1>
+  <p class="sub">愿力：从恐惧驱动到内在驱动的认知转型</p>
+  <p class="sub2">Aspiration: From Fear-Driven to Inner-Driven</p>
+</div>
+
+<div class="cols">
+  <div class="col">
+    <h2>📖 中文目录</h2>
+    <a href="preface.html?lang=zh"><span class="num">00</span> 前言</a>
+    <a href="two-engines.html?lang=zh"><span class="num">01</span> 第一章：两种引擎</a>
+    <a href="anatomy-of-fear.html?lang=zh"><span class="num">02</span> 第二章：恐惧的解剖</a>
+    <a href="inertia-of-karma.html?lang=zh"><span class="num">03</span> 第三章：业力的惯性</a>
+    <a href="nature-of-aspiration.html?lang=zh"><span class="num">04</span> 第四章：愿力的本质</a>
+    <a href="reactive-to-responsive.html?lang=zh"><span class="num">05</span> 第五章：从反应到回应</a>
+    <a href="stress-paradox.html?lang=zh"><span class="num">06</span> 第六章：适度压力的悖论</a>
+    <a href="daily-practice.html?lang=zh"><span class="num">07</span> 第七章：愿力的日常实践</a>
+    <a href="aspiration-in-orgs.html?lang=zh"><span class="num">08</span> 第八章：组织中的愿力</a>
+    <a href="connecting-to-greater.html?lang=zh"><span class="num">09</span> 第九章：与更大的东西连接</a>
+
+  </div>
+  <div class="col">
+    <h2>📖 Table of Contents</h2>
+    <a href="preface.html?lang=en"><span class="num">00</span> Preface</a>
+    <a href="two-engines.html?lang=en"><span class="num">01</span> Ch1: Two Engines</a>
+    <a href="anatomy-of-fear.html?lang=en"><span class="num">02</span> Ch2: Anatomy of Fear</a>
+    <a href="inertia-of-karma.html?lang=en"><span class="num">03</span> Ch3: Inertia of Karma</a>
+    <a href="nature-of-aspiration.html?lang=en"><span class="num">04</span> Ch4: Nature of Aspiration</a>
+    <a href="reactive-to-responsive.html?lang=en"><span class="num">05</span> Ch5: Reactive to Responsive</a>
+    <a href="stress-paradox.html?lang=en"><span class="num">06</span> Ch6: The Stress Paradox</a>
+    <a href="daily-practice.html?lang=en"><span class="num">07</span> Ch7: Daily Practice</a>
+    <a href="aspiration-in-orgs.html?lang=en"><span class="num">08</span> Ch8: Aspiration in Orgs</a>
+    <a href="connecting-to-greater.html?lang=en"><span class="num">09</span> Ch9: Connecting to Greater</a>
+
+  </div>
+</div>
+
+<div class="pillars">
+  <div class="pill">
+    <div class="icon">🔥</div>
+    <h3>诊断篇 Diagnosis</h3>
+    <p>Ch01-03: 两种引擎 · 恐惧解剖 · 业力惯性</p>
+  </div>
+  <div class="pill">
+    <div class="icon">🔄</div>
+    <h3>转换篇 Transformation</h3>
+    <p>Ch04-06: 愿力本质 · 反应到回应 · 压力悖论</p>
+  </div>
+  <div class="pill">
+    <div class="icon">🌱</div>
+    <h3>应用篇 Application</h3>
+    <p>Ch07-09: 日常实践 · 组织愿力 · 意义连接</p>
+  </div>
+</div>
+
+<div class="companion">
+  <p>📚 姊妹书 Companion Book: <a href="https://wanweiok.github.io/book-metacognition">《元认知：AI 时代的人类最后护城河》</a></p>
+  <p>《元认知》回答 HOW（如何思考）· 《愿力》回答 WHY（为何行动）</p>
+</div>
+</main>
+</body>
+</html>

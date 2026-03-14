@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ch1: Two Engines | Aspiration: From Fear-Driven to Inner-Driven</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2333;--tx:#e6edf3;--tx2:#8b949e;--ac:#7c3aed;--ac2:#a78bfa;--bd:#30363d;--gn:#3fb950;--or:#d29922}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;display:flex;min-height:100vh}
+.side{width:260px;min-width:260px;background:var(--bg2);border-right:1px solid var(--bd);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;transition:transform .3s;padding:20px 0}
+.side-hd{padding:0 16px 16px;border-bottom:1px solid var(--bd);margin-bottom:8px}
+.side-hd h1{font-size:1.15rem;color:var(--ac2);letter-spacing:2px}
+.side-hd p{font-size:.72rem;color:var(--tx2);margin-top:3px}
+.toc a{display:block;padding:8px 16px;color:var(--tx2);text-decoration:none;font-size:.85rem;border-left:3px solid transparent;transition:all .2s}
+.toc a:hover,.toc a.cur{background:var(--bg3);color:var(--tx);border-left-color:var(--ac)}
+.lang-sw{padding:12px 16px;border-top:1px solid var(--bd);margin-top:8px;display:flex;gap:8px}
+.lang-sw a{padding:4px 12px;border-radius:4px;font-size:.78rem;text-decoration:none;color:var(--tx2);border:1px solid var(--bd)}
+.lang-sw a.act{background:var(--ac);color:#fff;border-color:var(--ac)}
+.main{margin-left:260px;flex:1;max-width:820px;padding:36px 44px 100px}
+h1{font-size:1.7rem;margin:28px 0 14px;color:var(--ac2);border-bottom:2px solid var(--bd);padding-bottom:8px}
+h2{font-size:1.3rem;margin:24px 0 10px;color:var(--tx)}
+h3{font-size:1.05rem;margin:18px 0 6px;color:var(--ac2)}
+p{margin:8px 0}
+hr{border:none;border-top:1px solid var(--bd);margin:24px 0}
+strong{color:#fff}
+em{color:var(--ac2);font-style:italic}
+code{background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:.86em;color:var(--or)}
+pre{background:var(--bg3);padding:14px;border-radius:7px;overflow-x:auto;margin:14px 0;border:1px solid var(--bd)}
+pre code{background:none;padding:0;color:var(--tx);font-size:.83rem}
+a{color:var(--ac2)}
+.tbl{overflow-x:auto;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{background:var(--bg3);color:var(--ac2);padding:8px 12px;text-align:left;border-bottom:2px solid var(--ac);font-weight:600}
+td{padding:7px 12px;border-bottom:1px solid var(--bd)}
+tr:hover td{background:rgba(124,58,237,.06)}
+ul{margin:8px 0 8px 22px}
+li{margin:3px 0}
+li::marker{color:var(--ac)}
+blockquote{border-left:4px solid var(--ac);padding:10px 18px;margin:14px 0;background:rgba(124,58,237,.08);border-radius:0 7px 7px 0;color:var(--tx2);font-style:italic}
+.mermaid{background:var(--bg2);padding:18px;border-radius:9px;margin:18px 0;border:1px solid var(--bd);text-align:center}
+.ch-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--bd)}
+.ch-nav a{color:var(--ac2);text-decoration:none;padding:6px 14px;border:1px solid var(--bd);border-radius:5px;font-size:.88rem;transition:all .2s}
+.ch-nav a:hover{background:var(--bg3);border-color:var(--ac)}
+.ham{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--bg2);border:1px solid var(--bd);color:var(--tx);padding:6px 10px;border-radius:5px;font-size:1.1rem;cursor:pointer}
+.num-item{margin:4px 0 4px 20px}
+@media(max-width:860px){.side{transform:translateX(-100%)}.side.open{transform:translateX(0)}.main{margin-left:0;padding:20px 16px 60px}.ham{display:block}h1{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<button class="ham" onclick="document.querySelector('.side').classList.toggle('open')">☰</button>
+<nav class="side">
+  <div class="side-hd">
+    <h1>ASPIRATION</h1>
+    <p>Fear-Driven → Inner-Driven</p>
+  </div>
+  <div class="toc">
+<a href="preface.html?lang=en">00 Preface</a>
+<a href="two-engines.html?lang=en" class="cur">01 Ch1: Two Engines</a>
+<a href="anatomy-of-fear.html?lang=en">02 Ch2: Anatomy of Fear</a>
+<a href="inertia-of-karma.html?lang=en">03 Ch3: Inertia of Karma</a>
+<a href="nature-of-aspiration.html?lang=en">04 Ch4: Nature of Aspiration</a>
+<a href="reactive-to-responsive.html?lang=en">05 Ch5: Reactive to Responsive</a>
+<a href="stress-paradox.html?lang=en">06 Ch6: The Stress Paradox</a>
+<a href="daily-practice.html?lang=en">07 Ch7: Daily Practice</a>
+<a href="aspiration-in-orgs.html?lang=en">08 Ch8: Aspiration in Orgs</a>
+<a href="connecting-to-greater.html?lang=en">09 Ch9: Connecting to Greater</a>
+
+  </div>
+  <div class="lang-sw">
+    <a href="two-engines.html?lang=zh" class="">中文</a>
+    <a href="two-engines.html?lang=en" class="act">English</a>
+  </div>
+</nav>
+<main class="main">
+<h1>Chapter 1: Two Engines</h1>
+
+<p><strong>Core question</strong>: What is the structural difference between fear-driven and aspiration-driven motivation?</p>
+
+<hr>
+
+<h2>1.1 Opening: A Man Who Couldn't Stop</h2>
+
+<p>The year Chen Shuo turned thirty-eight, he received his seventh promotion. His new business card read "Vice President of Engineering." He managed a two-hundred-person team, hit every annual OKR, and delivered 34% year-over-year revenue growth. By every external metric, he was a precision-tuned success machine.</p>
+
+<p>Only his medical report told the other story: elevated fasting glucose, chronically high cortisol, and sleep tracking data showing deep sleep at barely 12% of total sleep time. His alarm was set for six a.m., but he routinely woke at four — not from energy, but from anxiety. The same loop played on repeat: What if next quarter's numbers slip? What if that key client churns? What if a competitor ten years younger ships it first?</p>
+
+<p>That autumn, at a closed-door industry gathering, he met Lin Wei. She ran a comparable engineering organization at a company of similar scale. Her problems were equally complex, her pressures equally real. But she carried something Chen Shuo couldn't name — not ease, but a quality of focused calm. When she talked about technical challenges, her eyes held a light, as if she were describing an adventure she'd volunteered for, not a war she had to win.</p>
+
+<p>Over dinner, Chen Shuo couldn't help asking: "Don't you feel anxious?" Lin Wei set down her chopsticks, thought for a moment, and said: "Of course I do. But I've realized that the thing pulling me out of bed each morning isn't fear. It's curiosity. I want to see what this thing can become."</p>
+
+<p>That sentence struck him. He realized he'd been running fast, but running <em>away</em> — away from failure, from obsolescence, from not being enough. Lin Wei was running <em>toward</em> — toward an outcome she genuinely wanted to see. Both were sprinting. But the engines were completely different.</p>
+
+<p>That night, back in his hotel room, Chen Shuo asked himself a question he had never asked before: if you took the fear away, would I still be doing this? The answer kept him silent for a long time.</p>
+
+<hr>
+
+<h2>1.2 Core Thesis: The Architecture of Two Drives</h2>
+
+<p>Psychology noticed the difference between Chen Shuo and Lin Wei long ago — it simply used more precise vocabulary.</p>
+
+<p>Elliot and Covington (2001), in their approach-avoidance motivation framework, proposed that all human goal pursuit can be classified along a fundamental axis: <strong>approach motivation</strong>, moving toward positive outcomes, and <strong>avoidance motivation</strong>, moving away from negative outcomes. This is not a simple "optimism vs. pessimism" distinction. It describes a difference in the underlying operating system that generates behavior.</p>
+
+<p>Eastern wisdom identified the same dividing line twenty-five centuries earlier — simply using different names. In Buddhist psychology, <strong>karma</strong> (业力) in its original meaning is not fatalistic "destiny" but the inertial pattern of behavior — past choices shaping present reactive tendencies. A person long driven by fear develops the karma of fear-reaction: uncertainty triggers anxiety, challenge triggers defensiveness, choice triggers retreat to safety. This pattern is self-reinforcing; the more it is used, the deeper it grooves — which is precisely how avoidance motivation operates. <strong>Aspiration power</strong> (愿力) is a conscious setting of direction: not pushed by past inertia, but pulled by a future vision. The Zen expression "great doubt, great awakening" captures this — not the absence of fear, but a desire for truth that is stronger than fear.</p>
+
+<p>Deci and Ryan (2000) contributed the empirical foundation for this shared East-West insight through Self-Determination Theory (SDT). SDT identifies three basic psychological needs: <strong>autonomy</strong> — the sense that one's actions are self-directed; <strong>competence</strong> — the sense that one can meet challenges effectively; and <strong>relatedness</strong> — the sense of meaningful connection with others. When these needs are satisfied, people develop intrinsic motivation — the psychological equivalent of aspiration power. When they are thwarted, behavior degrades to extrinsic motivation or complete amotivation — the person is trapped in karma's inertial loop.</p>
+
+<p>In the language of this book:</p>
+
+<ul><li><strong>Fear-driven</strong> (avoidance motivation / karmic inertia) = pushed by threat. Fuel: anxiety, external pressure, others' judgments, a sense of scarcity. Behavioral pattern: defensive — avoid mistakes, avoid falling behind, avoid punishment.</li><li><strong>Aspiration-driven</strong> (approach motivation / conscious direction) = pulled by vision. Fuel: curiosity, growth desire, sense of purpose, intrinsic satisfaction. Behavioral pattern: exploratory — try new possibilities, pursue excellence, create value.</li></ul>
+<p>Both produce action. But the quality of that action, its duration, and its effect on the person taking it are fundamentally different. The Confucian classic <em>Great Learning</em> puts it concisely: "Know where to rest, and stability follows; from stability comes tranquility; from tranquility, careful deliberation; from deliberation, attainment." "Knowing where to rest" is not about stopping. It is about knowing what you are moving toward — the very starting point of aspiration. Those who don't know where to rest are fleeing with every step; those who do are drawing closer with every step.</p>
+
+<hr>
+
+<h2>1.3 Evidence and Research</h2>
+
+<h3>1.3.1 Neuroscience: Two Distinct Circuits</h3>
+
+<p>Fear-driven and aspiration-driven motivation are not just psychological metaphors. They correspond to two distinguishable neural pathways in the brain.</p>
+
+<p>When a person perceives threat, the amygdala activates first, triggering the hypothalamic-pituitary-adrenal (HPA) axis and releasing cortisol and adrenaline. This is the classic fight-or-flight response. Sapolsky (2004), in <em>Why Zebras Don't Get Ulcers</em>, demonstrated that this system was designed for short-term survival — extremely useful when facing a lion, but devastating when chronically activated. Sustained cortisol exposure damages the hippocampus, suppresses immune function, and impairs executive function in the prefrontal cortex. A person running on chronic fear is operating daily life on an emergency evacuation system.</p>
+
+<p>When a person is driven by curiosity or intrinsic interest, a different circuit activates: the mesolimbic dopamine pathway, particularly the connection from the ventral tegmental area (VTA) to the nucleus accumbens. This pathway is associated with reward anticipation and exploratory behavior. The prefrontal cortex (PFC) remains highly active throughout, supporting planning, creative thinking, and flexible decision-making. This is not a "pleasure circuit" — it is an exploration circuit. The brain is signaling: "This is worth going deeper. Continue."</p>
+
+<p>A crucial distinction here is between acute stress and chronic stress. Acute stress — a single presentation, an exam — briefly activates the HPA axis and then subsides, sometimes even enhancing memory consolidation. But when the sense of threat becomes a constant background hum, cortisol remains chronically elevated and the brain enters a "permanent wartime footing." Sapolsky calls this "the physiological cost of psychosocial stress": humans are the only species that chronically activates the stress system in response to imagined threats.</p>
+
+<p>The critical difference lies in their relationship to cognitive function. The cortisol pathway narrows attention under pressure (attentional narrowing), causing a person to see only the immediate threat while missing peripheral information. The dopamine pathway tends to broaden the attentional field, facilitating associative thinking and creativity. This explains a common observation: fear-driven people execute with ferocious efficiency but rarely innovate, while aspiration-driven people sometimes appear unfocused yet routinely produce unexpected insights.</p>
+
+<p>It is worth noting that this neural distinction echoes an ancient observation from Eastern contemplative traditions. Buddhist meditation emphasizes the joint practice of <em>samatha</em> (calm abiding) and <em>vipassana</em> (insight) — first letting the mind settle, then observing reality clearly from that settled state. In neuroscientific terms, <em>samatha</em> is allowing the HPA axis to return to baseline, exiting chronic stress mode; <em>vipassana</em> is bringing the prefrontal cortex back online, restoring global awareness. Fear-driven people cannot see the big picture not because they lack intelligence, but because their brains are stuck in "wartime lockdown" — cortisol has switched off the prefrontal lights.</p>
+
+<h3>1.3.2 Psychology: The Cost and Reward of Autonomy</h3>
+
+<p>Extensive empirical research in SDT demonstrates that when behavior stems from intrinsic motivation, individuals exhibit higher creativity, greater persistence, and better psychological well-being (Deci & Ryan, 2000). When behavior is primarily driven by external rewards and punishments — even ostensibly positive ones like bonuses or praise — intrinsic motivation can actually be undermined. This is the well-documented overjustification effect.</p>
+
+<p>A classic experiment illustrates the point: two groups of children were asked to draw. One group was promised a reward; the other was not. In the short term, the rewarded group drew more. But after the reward was removed, their willingness to draw dropped below that of the never-rewarded control group. The reward had transformed "I enjoy drawing" into "I draw for the reward" — and once the reward disappeared, so did the reason. Fear-driven motivation follows the same logic: when "avoiding punishment" becomes the primary reason for action, any temporary easing of the threat creates a motivation vacuum.</p>
+
+<p>This motivation vacuum is, in fact, the psychological mechanism of the "karmic cycle." Reflect on your own experience: have you ever reached the end of an intense high-pressure period and felt not relief but a strange emptiness? That disorienting "the battle's over but I don't know what I'm living for" blankness? Fear-driven people dread vacations, because vacation means losing the only reason for action. The moment the treadmill stops, they don't arrive at a destination — they discover they never had one.</p>
+
+<p>This is the most essential difference between fear-driven and aspiration-driven motivation. Fear is a <em>push force</em>, effective only when burning behind you. Aspiration is a <em>gravitational pull</em> — even without external pressure, you still know where you're heading. A person who is pushed stops when the pushing stops, with nothing left. A person who is pulled merely pauses — the direction remains.</p>
+
+<p>This also explains the tight link between fear-driven motivation and burnout. The core of burnout is not "too tired" but "lost the reason for doing it." A person can sustain enormous workloads without burning out — provided they feel the work is self-chosen and meaningful. Fear-driven motivation systematically undermines both conditions: it reframes work as "I have to" rather than "I want to," and locks attention on avoiding punishment rather than creating value. Over time, the result is not just fatigue but cynicism and even aversion toward the work itself — not because the work lacks meaning, but because fear has eclipsed the meaning.</p>
+
+<hr>
+
+<h2>1.4 The Energy Model: Treadmill vs. River</h2>
+
+<p>Let us now integrate the research above into a single model.</p>
+
+<p><strong>Fear-driven motivation is a treadmill with fire behind you.</strong> You run fast because stopping means getting burned. But no matter how fast you run, you stay in place. The fire never extinguishes because of your speed; it is externally imposed and beyond your control. The treadmill's tragedy: the faster you go, the more energy you consume, but displacement remains zero. And the fire grows larger — each time you successfully escape, the next round requires a stronger fear to get you moving. Like painkiller tolerance: the first pill works, the second needs a higher dose, and eventually you swallow the whole bottle while the pain persists.</p>
+
+<p><strong>Aspiration-driven motivation is water finding its riverbed.</strong> Water does not need to be forced to flow. Gravity pulls it naturally toward lower ground. When the channel is clear, the water accelerates, deepens, gains momentum. The riverbed is your vision and values — not a track imposed from outside, but a direction you have internalized as your own. More importantly, water shapes the riverbed as it flows, and the riverbed guides the water in return — a mutually generative process. The more you do, the clearer you become about what you want; the clearer you are, the more naturally the doing flows.</p>
+
+<p>Mullainathan and Shafir (2013), in <em>Scarcity</em>, introduced the concept of the cognitive bandwidth tax: when a person is in a state of scarcity or threat, their cognitive capacity is significantly captured — not because they lack intelligence, but because fear itself consumes cognitive resources. A person chased by bills, chased by KPIs, chased by "what if I fail" — each is paying a bandwidth tax to fear. Their executive function, decision quality, and creativity decline accordingly.</p>
+
+<p>Try a thought experiment: review your last workday and estimate how much time went to <em>actually solving problems</em> versus <em>managing anxiety about problems</em> — rechecking data you already checked, contingency-planning for worst cases that haven't materialized, guessing what others think of you, rewording that email for the fifth time before hitting "Send." For many fear-driven workers, the latter share is far larger than they would care to admit.</p>
+
+<p>This is the hidden cost of fear-driven motivation: <strong>it looks like hustling, but it is actually cognitive waste.</strong> A large portion of bandwidth goes to managing anxiety rather than solving problems.</p>
+
+<p>The following table summarizes how the two driving systems compare across key dimensions:</p>
+
+<div class="tbl"><table>
+<thead><tr><th>Dimension</th><th>Fear-Driven (Avoidance / Karmic Inertia)</th><th>Aspiration-Driven (Approach / Conscious Direction)</th></tr></thead><tbody>
+<tr><td><strong>Neural basis</strong></td><td>Amygdala → HPA axis → cortisol</td><td>PFC → VTA → dopamine</td></tr>
+<tr><td><strong>Attention pattern</strong></td><td>Narrowed (tunnel vision)</td><td>Broadened (associative, divergent)</td></tr>
+<tr><td><strong>Emotional tone</strong></td><td>Anxiety, urgency, walking on eggshells</td><td>Curiosity, engagement, flow</td></tr>
+<tr><td><strong>Behavioral signature</strong></td><td>Strong execution, risk avoidance</td><td>High creativity, embraces uncertainty</td></tr>
+<tr><td><strong>Energy trend</strong></td><td>Dissipative — each cycle consumes</td><td>Generative — each cycle compounds</td></tr>
+<tr><td><strong>Long-term outcome</strong></td><td>Burnout, health erosion, meaning depletion</td><td>Sustained growth, resilience</td></tr>
+<tr><td><strong>Typical inner monologue</strong></td><td>"What if I fail?"</td><td>"What if I try?"</td></tr>
+</tbody></table></div>
+
+<div class="mermaid">graph TB
+    subgraph Fear-Driven System
+        F1["External threat / pressure"] --> F2["Amygdala activation"]
+        F2 --> F3["Cortisol release → Attentional narrowing"]
+        F3 --> F4["Defensive behavior"]
+        F4 --> F5["Short-term results"]
+        F5 --> F6["Threat unresolved → Anxiety returns"]
+        F6 --> F1
+    end
+    subgraph Aspiration-Driven System
+        A1["Intrinsic curiosity / purpose"] --> A2["Prefrontal cortex activation"]
+        A2 --> A3["Dopamine release → Attentional broadening"]
+        A3 --> A4["Exploratory behavior"]
+        A4 --> A5["Competence growth + meaning"]
+        A5 --> A6["Intrinsic motivation reinforced"]
+        A6 --> A1
+    end</div>
+
+<p>The key difference between the two systems is the nature of their feedback loops. The fear system is <strong>dissipative</strong>: each cycle consumes energy, because the sense of threat never truly resolves. The aspiration system is <strong>generative</strong>: each cycle accumulates competence and meaning, providing more fuel for the next.</p>
+
+<p>A financial analogy makes this vivid: fear-driven motivation is paying interest — you have taken out an "urgency loan," paying monthly installments of anxiety, but the principal (the underlying sense of threat) never decreases. Aspiration-driven motivation is earning compound interest — each round of investment adds to the principal (competence and meaning), and the next cycle's returns build on a larger base. Over ten years, the two curves do not differ by 20% or 50%. They diverge by orders of magnitude.</p>
+
+<p>Return to Chen Shuo and Lin Wei. Chen Shuo spends enormous daily energy managing anxiety: rechecking dashboards, rehearsing worst-case scenarios, guessing what leadership thinks. These activities look like "being diligent," but they are bandwidth tax. Lin Wei directs equivalent energy toward exploration and creation — not because she lacks pressure, but because her attention is not hijacked by fear. Her "riverbed" is clear enough that she naturally channels effort toward what genuinely matters.</p>
+
+<hr>
+
+<h2>1.5 Counterargument: "But Fear Works!"</h2>
+
+<p>An honest discussion must confront this objection: many highly successful people are, in fact, driven by fear.</p>
+
+<p>This is correct. Yerkes and Dodson (1908) demonstrated long ago that moderate levels of stress and arousal improve performance — the famous inverted-U curve. In survival situations, under the pressure of poverty, against a hard deadline, fear can be a powerful catalyst for action. Denying this would be dishonest.</p>
+
+<p>But a critical distinction must be drawn between <strong>ignition</strong> and <strong>fuel</strong>.</p>
+
+<p>Fear is an excellent match — it can spark action from a cold start instantaneously. But it is poor fuel. Using fear as long-term fuel is like heating your house with gasoline — high thermal output, but eventually you burn the house down. I have seen this pattern too many times: people who sprint on fear through their twenties, then hit body alarms, relationship collapse, and meaning exhaustion in their mid-thirties — not because they didn't work hard enough, but precisely because they worked too hard on the wrong fuel. Short-term output can be equal or even superior. But over a five-to-ten-year horizon, the costs manifest as burnout, health crises, and creative depletion.</p>
+
+<p>There is also a commonly overlooked angle: many "fear-driven success stories" actually involve a quiet engine switch somewhere along the way. These individuals genuinely started under the push of scarcity or threat. But during the journey, they found interest, competence, and meaning, and gradually transitioned from fear-driven to aspiration-driven — a shift so natural that they themselves often fail to notice it. They attribute the entire arc to "the power of fear," when in reality, fear was only responsible for the ignition phase.</p>
+
+<p>Return to Chen Shuo from the opening: his first three promotions were very likely fear-driven — fear of poverty, fear of mediocrity, fear of disappointing his parents. But if he was fortunate enough, at some point a genuinely meaningful technical problem captured his attention and he quietly switched engines. Sadly, many people never get that lucky — or rather, they are running too hard to notice the riverbed entrances along the way.</p>
+
+<p>The issue is not fear itself, but <strong>whether fear is the only engine you run on</strong>. Occasional deadline pressure is a normal energy boost. But if your first thought every morning is "What if I'm not good enough?" — that is not a boost. That is chronic poisoning.</p>
+
+<hr>
+
+<h2>1.6 Reflective Exercise: What Is Your Engine?</h2>
+
+<p>The goal of this exercise is not diagnosis but awareness. Most people have never consciously examined the driving force behind their behavior — not because they don't care, but because fear-driven motivation often masquerades as "ambition" and "responsibility," making it difficult to identify. The five questions below can help you begin that discernment process.</p>
+
+<p>Take five minutes to answer the following questions honestly. There are no right or wrong answers — only awareness.</p>
+
+<p class='num-item'>1. <strong>Recall the first work task you did today.</strong> Was the force behind it closer to "I have to, or there will be consequences" or "I want to, because I'm curious about the outcome"?</p>
+<p class='num-item'>2. <strong>Imagine you are completely financially free.</strong> Would you still do your current job? Which parts would you keep? Which would you drop immediately?</p>
+<p class='num-item'>3. <strong>When was the last time you lost track of time while immersed in something?</strong> What was driving that immersion — fear or interest?</p>
+<p class='num-item'>4. <strong>Think about the last time work anxiety kept you awake.</strong> Was the core of that anxiety "I can't do this well enough" or "The outcome isn't shaping up the way I hoped"? The two are different.</p>
+<p class='num-item'>5. <strong>If you could give only one piece of career advice to someone younger, what would it be?</strong> Are you following that advice yourself?</p>
+
+<p>Record your answers. No need to analyze. No need to change anything. Just see.</p>
+
+<p>One note: if all five answers point toward fear-driven motivation, don't panic — that itself proves your awareness is online. The real danger is not "discovering you're fear-driven" but "being fear-driven without knowing it." Awareness is always the first step of change.</p>
+
+<hr>
+
+<h2>1.7 Summary → Next Chapter</h2>
+
+<p>This chapter has revealed a structural fact: the engine driving our behavior comes in two types — fear-driven (avoidance) and aspiration-driven (approach). They differ fundamentally in neural circuitry, psychological mechanism, and long-term consequence. Fear-driven motivation taxes cognitive bandwidth. Aspiration-driven motivation compounds inner momentum. The difference is not in the speed of action, but in its direction and sustainability.</p>
+
+<p>The core consensus between East and West on this point is: <strong>durable drive does not come from externally applied pressure, but from clarity of inner direction.</strong> Fear signals what to move away from, but it cannot tell you where to go. Aspiration — whether you call it intrinsic motivation, autonomous goal pursuit, or "knowing where to rest" — supplies precisely that missing answer.</p>
+
+<p>If the reflective exercise above revealed that you lean toward fear-driven motivation, there is no need for alarm — that recognition is itself an act of awareness, and awareness is the starting point of change. Fear-driven motivation is not a "defect." It is an adaptive strategy formed under specific conditions. The question is not whether you have used it, but whether you have the capacity to choose a different engine.</p>
+
+<p>In the next chapter, we go inside the fear engine itself. How does it operate? Why is it so persistent? Why is it so hard to abandon even when we know it harms us? To replace an engine, you must first understand the old one completely.</p>
+
+<hr>
+
+<h2>References</h2>
+
+<p class='num-item'>1. <strong>Elliot, A. J., & Covington, M. V.</strong> (2001). "Approach and Avoidance Motivation." <em>Educational Psychology Review</em>, 13(2), 73–92. DOI: 10.1023/A:1009009018235 — Foundational paper establishing the approach-avoidance framework for classifying all goal pursuit.</p>
+<p class='num-item'>2. <strong>Deci, E. L., & Ryan, R. M.</strong> (2000). "The 'What' and 'Why' of Goal Pursuits: Human Needs and the Self-Determination of Behavior." <em>Psychological Inquiry</em>, 11(4), 227–268. DOI: 10.1207/S15327965PLI1104_01 — Core SDT paper defining autonomy, competence, and relatedness as basic psychological needs.</p>
+<p class='num-item'>3. <strong>Sapolsky, R. M.</strong> (2004). <em>Why Zebras Don't Get Ulcers</em> (3rd ed.). Holt Paperbacks. ISBN: 978-0805073690 — Neuroendocrine mechanisms of chronic stress; long-term cortisol damage to hippocampus and prefrontal cortex.</p>
+<p class='num-item'>4. <strong>Mullainathan, S., & Shafir, E.</strong> (2013). <em>Scarcity: Why Having Too Little Means So Much</em>. Times Books. ISBN: 978-0805092646 — The "cognitive bandwidth tax" concept: how scarcity and threat capture cognitive capacity and degrade decision quality.</p>
+<p class='num-item'>5. <strong>Yerkes, R. M., & Dodson, J. D.</strong> (1908). "The Relation of Strength of Stimulus to Rapidity of Habit-Formation." <em>Journal of Comparative Neurology and Psychology</em>, 18(5), 459–482. DOI: 10.1002/cne.920180503 — The inverted-U relationship between arousal and performance; moderate stress helps, excessive stress collapses output.</p>
+
+<div class="ch-nav">
+  <a href="preface.html?lang=en">← Preface</a>
+  <a href="anatomy-of-fear.html?lang=en">Ch2: Anatomy of Fear →</a>
+</div>
+</main>
+<script>
+mermaid.initialize({startOnLoad:true,theme:'dark',themeVariables:{primaryColor:'#7c3aed',primaryTextColor:'#fff',lineColor:'#8b949e',secondaryColor:'#1c2333'}});
+</script>
+</body>
+</html>

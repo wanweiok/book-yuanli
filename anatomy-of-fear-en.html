@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ch2: Anatomy of Fear | Aspiration: From Fear-Driven to Inner-Driven</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2333;--tx:#e6edf3;--tx2:#8b949e;--ac:#7c3aed;--ac2:#a78bfa;--bd:#30363d;--gn:#3fb950;--or:#d29922}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;display:flex;min-height:100vh}
+.side{width:260px;min-width:260px;background:var(--bg2);border-right:1px solid var(--bd);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;transition:transform .3s;padding:20px 0}
+.side-hd{padding:0 16px 16px;border-bottom:1px solid var(--bd);margin-bottom:8px}
+.side-hd h1{font-size:1.15rem;color:var(--ac2);letter-spacing:2px}
+.side-hd p{font-size:.72rem;color:var(--tx2);margin-top:3px}
+.toc a{display:block;padding:8px 16px;color:var(--tx2);text-decoration:none;font-size:.85rem;border-left:3px solid transparent;transition:all .2s}
+.toc a:hover,.toc a.cur{background:var(--bg3);color:var(--tx);border-left-color:var(--ac)}
+.lang-sw{padding:12px 16px;border-top:1px solid var(--bd);margin-top:8px;display:flex;gap:8px}
+.lang-sw a{padding:4px 12px;border-radius:4px;font-size:.78rem;text-decoration:none;color:var(--tx2);border:1px solid var(--bd)}
+.lang-sw a.act{background:var(--ac);color:#fff;border-color:var(--ac)}
+.main{margin-left:260px;flex:1;max-width:820px;padding:36px 44px 100px}
+h1{font-size:1.7rem;margin:28px 0 14px;color:var(--ac2);border-bottom:2px solid var(--bd);padding-bottom:8px}
+h2{font-size:1.3rem;margin:24px 0 10px;color:var(--tx)}
+h3{font-size:1.05rem;margin:18px 0 6px;color:var(--ac2)}
+p{margin:8px 0}
+hr{border:none;border-top:1px solid var(--bd);margin:24px 0}
+strong{color:#fff}
+em{color:var(--ac2);font-style:italic}
+code{background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:.86em;color:var(--or)}
+pre{background:var(--bg3);padding:14px;border-radius:7px;overflow-x:auto;margin:14px 0;border:1px solid var(--bd)}
+pre code{background:none;padding:0;color:var(--tx);font-size:.83rem}
+a{color:var(--ac2)}
+.tbl{overflow-x:auto;margin:14px 0}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{background:var(--bg3);color:var(--ac2);padding:8px 12px;text-align:left;border-bottom:2px solid var(--ac);font-weight:600}
+td{padding:7px 12px;border-bottom:1px solid var(--bd)}
+tr:hover td{background:rgba(124,58,237,.06)}
+ul{margin:8px 0 8px 22px}
+li{margin:3px 0}
+li::marker{color:var(--ac)}
+blockquote{border-left:4px solid var(--ac);padding:10px 18px;margin:14px 0;background:rgba(124,58,237,.08);border-radius:0 7px 7px 0;color:var(--tx2);font-style:italic}
+.mermaid{background:var(--bg2);padding:18px;border-radius:9px;margin:18px 0;border:1px solid var(--bd);text-align:center}
+.ch-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--bd)}
+.ch-nav a{color:var(--ac2);text-decoration:none;padding:6px 14px;border:1px solid var(--bd);border-radius:5px;font-size:.88rem;transition:all .2s}
+.ch-nav a:hover{background:var(--bg3);border-color:var(--ac)}
+.ham{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--bg2);border:1px solid var(--bd);color:var(--tx);padding:6px 10px;border-radius:5px;font-size:1.1rem;cursor:pointer}
+.num-item{margin:4px 0 4px 20px}
+@media(max-width:860px){.side{transform:translateX(-100%)}.side.open{transform:translateX(0)}.main{margin-left:0;padding:20px 16px 60px}.ham{display:block}h1{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<button class="ham" onclick="document.querySelector('.side').classList.toggle('open')">☰</button>
+<nav class="side">
+  <div class="side-hd">
+    <h1>ASPIRATION</h1>
+    <p>Fear-Driven → Inner-Driven</p>
+  </div>
+  <div class="toc">
+<a href="preface.html?lang=en">00 Preface</a>
+<a href="two-engines.html?lang=en">01 Ch1: Two Engines</a>
+<a href="anatomy-of-fear.html?lang=en" class="cur">02 Ch2: Anatomy of Fear</a>
+<a href="inertia-of-karma.html?lang=en">03 Ch3: Inertia of Karma</a>
+<a href="nature-of-aspiration.html?lang=en">04 Ch4: Nature of Aspiration</a>
+<a href="reactive-to-responsive.html?lang=en">05 Ch5: Reactive to Responsive</a>
+<a href="stress-paradox.html?lang=en">06 Ch6: The Stress Paradox</a>
+<a href="daily-practice.html?lang=en">07 Ch7: Daily Practice</a>
+<a href="aspiration-in-orgs.html?lang=en">08 Ch8: Aspiration in Orgs</a>
+<a href="connecting-to-greater.html?lang=en">09 Ch9: Connecting to Greater</a>
+
+  </div>
+  <div class="lang-sw">
+    <a href="anatomy-of-fear.html?lang=zh" class="">中文</a>
+    <a href="anatomy-of-fear.html?lang=en" class="act">English</a>
+  </div>
+</nav>
+<main class="main">
+<h1>Chapter 2: Anatomy of Fear</h1>
+
+<p><strong>Core Question</strong>: Why is fear-driven motivation effective short-term but draining long-term?</p>
+
+<hr>
+
+<h2>2.1 Opening Story: "Aren't You Afraid?"</h2>
+
+<p>Fang Lin didn't expect to collide with her past in a conference room.</p>
+
+<p>It was an ordinary Tuesday afternoon. She had returned to work barely three months ago after a year of medical leave. The emergency room at thirty-three — severe hyperthyroidism, cardiac arrhythmia, critically elevated cortisol — was last year's chapter. She thought she had figured things out.</p>
+
+<p>Until she started mentoring a new product manager.</p>
+
+<p>Xiao Zhou was twenty-six, sharp, hardworking, with a tightness in her eyes that Fang Lin recognized with an almost visceral alarm. That day, Fang Lin was helping her debrief a failed project proposal. Xiao Zhou stared at the table and said: "I knew the direction was right, but I didn't dare push back in the review meeting. If they challenged me, I was afraid I wouldn't have the answers."</p>
+
+<p>Fang Lin blurted out: "Aren't you afraid? If you weren't afraid you wouldn't be this torn up about it. You should be <em>more</em> afraid — afraid that if you don't push back, the opportunity is gone."</p>
+
+<p>The moment the words left her mouth, Fang Lin froze.</p>
+
+<p>Those weren't her words. They were her mother's.</p>
+
+<p>Her mother had used that exact sentence pattern countless times: "Aren't you afraid of failing the exam?" "Aren't you afraid of being outperformed?" "Aren't you afraid of ending up worse off than everyone else?" Those phrases had been planted in her operating system like seeds, still running automatically twenty years later. She wasn't just a person driven by fear — she was becoming fear's propagator.</p>
+
+<p>Fang Lin sat in silence for a long time. Xiao Zhou watched her, confused. Finally she said: "Forget what I just told you. I taught you the wrong thing."</p>
+
+<p>That night, Fang Lin wrote an insight in her journal: <strong>Fear is not merely a personal psychological state — it is a behavioral pattern that can be transmitted across generations.</strong> It passes from mother to daughter, from boss to subordinate, from an anxious organization to every new joiner. To understand why fear is so tenacious, we cannot examine only how it operates inside a single mind — we must also see how it spreads between people.</p>
+
+<p>This is precisely what this chapter sets out to do: open the hood of the fear-driven engine, identify its components, and understand how they mesh together with such precision that people cannot stop even when they know the damage.</p>
+
+<hr>
+
+<h2>2.2 The Neuroscience of Fear</h2>
+
+<h3>The Amygdala Hijack</h3>
+
+<p>In <em>Emotional Intelligence</em> (1995), Daniel Goleman introduced an enormously explanatory concept: the <strong>amygdala hijack</strong>. When the brain perceives a threat signal, the amygdala — two almond-shaped neural clusters deep in the brain — can bypass the prefrontal cortex's rational processing pathway and directly trigger emotional and behavioral responses. The evolutionary logic of this "fast lane" is clear: when you encounter a snake in the jungle, you don't need a cost-benefit analysis first.</p>
+
+<p>The problem is that the modern amygdala cannot distinguish real survival threats from social ones. An ambiguously worded email from the boss, the wait before quarterly reviews, a colleague's pointed question in a meeting — these signals activate nearly the same neural circuits as ancestral encounters with predators. LeDoux's (1996) research showed that the direct thalamus-to-amygdala pathway transmits in approximately 12 milliseconds, while the cortical processing route takes 30–40 milliseconds. Fear always arrives before reason.</p>
+
+<h3>The HPA Axis: From Emergency Generator to Chronic Poison</h3>
+
+<p>Once the amygdala sounds the alarm, the hypothalamic-pituitary-adrenal (HPA) axis fires, ultimately triggering cortisol release from the adrenal cortex. In the short term, cortisol is useful: it raises blood sugar, sharpens alertness, and enhances muscle fuel supply. It is a precision emergency generator.</p>
+
+<p>But emergency generators aren't meant to be the main power supply.</p>
+
+<p>Sapolsky (2004) pointed out in <em>Why Zebras Don't Get Ulcers</em> that after a zebra escapes a lion, cortisol returns to baseline within minutes. Humans, however, can keep cortisol elevated for hours over an email they haven't even opened. When the HPA axis stays activated long-term, the cost extends far beyond fatigue: the hippocampus — responsible for memory and learning — shows dendritic atrophy and volume reduction under sustained high cortisol; the prefrontal cortex — responsible for planning, judgment, and impulse control — degrades; and ironically, the amygdala becomes <em>more</em> sensitive under chronic stress.</p>
+
+<p>The implication: <strong>people who run on fear long enough develop brains that are more prone to fear, less capable of rational thought, and worse at learning from experience.</strong> This is not metaphor — it is measurable structural change.</p>
+
+<h3>Tunnel Vision</h3>
+
+<p>Fear narrows attention. Evolutionarily, this makes perfect sense — when a predator appears, you need all cognitive resources focused on the threat. But in modern knowledge work that demands creativity and systems thinking, tunnel vision is catastrophic. Fredrickson's (2001) broaden-and-build theory demonstrates that positive emotions expand attentional and cognitive scope, while negative emotions — especially fear — compress it to its narrowest.</p>
+
+<div class="mermaid">graph TB
+    A["🔴 Threat Signal<br/>(email / deadline / criticism)"] --> B["Amygdala<br/>12ms fast response"]
+    B --> C["HPA Axis Activation"]
+    C --> D["Cortisol Release"]
+    D --> E["Short-term: blood sugar↑ alertness↑ muscle fuel↑"]
+    D --> F["Long-term: hippocampal atrophy · PFC impairment · amygdala sensitization"]
+    F --> G["More fear-prone · less rational · creativity↓"]
+    G -->|"positive feedback loop"| A
+
+    style A fill:#c0392b,color:#fff
+    style F fill:#e74c3c,color:#fff
+    style G fill:#922b21,color:#fff
+    style E fill:#27ae60,color:#fff</div>
+
+<hr>
+
+<h2>2.3 The Psychology of Scarcity</h2>
+
+<h3>Fear as Scarcity</h3>
+
+<p>In <em>Scarcity</em> (2013), Mullainathan and Shafir introduced a finding that reshaped behavioral economics: <strong>scarcity captures mental bandwidth.</strong> When people experience resource scarcity — whether money, time, or food — the brain involuntarily allocates massive cognitive resources to scarcity-related thinking, leaving sharply reduced bandwidth for everything else.</p>
+
+<p>Fear-driven people live in permanent scarcity mode. Not material scarcity, but psychological scarcity: scarcity of safety, of approval, of certainty. Fang Lin never lacked money, titles, or competence, but she perpetually felt "not enough" — not safe enough, not recognized enough, not certain enough. This feeling is neurally isomorphic to a low-income person's fixation on money.</p>
+
+<h3>The Cognitive Bandwidth Tax</h3>
+
+<p>Mullainathan and Shafir's experiments revealed a striking number: merely making people <em>think about</em> financial pressure caused cognitive impairment equivalent to 13–14 IQ points. Apply this framework to the fear-driven worker: how much cognitive bandwidth is consumed daily by "what if I fail," "what do others think of me," and "is my position secure"? These thoughts don't require conscious summoning — they run automatically, consuming CPU like background processes.</p>
+
+<h3>Involution: Fear-Scarcity at Collective Scale</h3>
+
+<p>If you work in the Chinese professional world, your experience of scarcity psychology is likely not just personal but ambient — saturating the entire environment. <strong>Involution</strong> (内卷) — the term that has dominated Chinese public discourse in recent years — is essentially fear-driven motivation at collective scale. Everyone works overtime, not because those extra two hours produce meaningfully more value, but because "everyone else is doing it, and if I don't I'll fall behind." This is the sociological amplification of scarcity psychology: when everyone feels "not enough," everyone scrambles harder, and everyone ends up feeling even more "not enough." Fear doesn't need a specific threat source — when it becomes the air, breathing itself is anxiety.</p>
+
+<h3>Ego Depletion</h3>
+
+<p>Fear-driven people must continuously spend willpower to suppress anxiety, maintain composure, and force themselves to act. Research on ego depletion was challenged by a 2016 large-scale replication that found the effect far smaller than originally reported — but the core observation stands: <strong>fear drains not only energy itself but also your confidence that you have energy left.</strong> It makes you feel exhausted when you still have reserves.</p>
+
+<hr>
+
+<h2>2.4 Why Fear Works Short-Term</h2>
+
+<h3>Evolutionary Advantage</h3>
+
+<p>Before critiquing fear-driven motivation, we must acknowledge its efficiency. The fight-or-flight response is the fastest motivational system mammals evolved. It requires no deliberation, no value alignment, no goal setting. Threat appears, action follows. In survival contexts, this speed is everything.</p>
+
+<h3>Social Reinforcement</h3>
+
+<p>Fear-driven cultures reward visible busyness. Working late is "dedication," skipping weekends is "drive," instant message response is "responsibility." These social signals create positive feedback: the fear-driven person's behavioral patterns happen to match the organization's surface definition of "high performance," further cementing the belief that fear works.</p>
+
+<h3>The Addiction Cycle: Fear's Hidden Reward</h3>
+
+<p>Fear-driven motivation has a hidden self-reinforcing mechanism that deserves a closer look.</p>
+
+<p>Picture this scenario: you have a report due Friday. Monday through Wednesday you are anxious but haven't started — not because you don't want to, but because fear simultaneously makes you feel "I must" and "I can't do it well enough," and the two forces cancel each other out in a painful paralysis. Thursday night, fear finally overwhelms procrastination. You pull an all-nighter, finishing at 3 AM. The moment you submit Friday morning, a massive wave of relief washes over you.</p>
+
+<p>You might call it "a sense of accomplishment," but examine it closely — it isn't the satisfaction of having created something. It's the physiological relaxation after threat removal. Like a stone that had been pressing on your chest suddenly lifted. The brain encodes "cessation of pain" as pleasure, nearly indistinguishable from genuine reward signals.</p>
+
+<p>So you unconsciously learn a pattern: <strong>procrastinate → fear accumulates → push to the limit → release-as-pleasure.</strong> Next time, you wait again until fear is strong enough, because only sufficient fear produces sufficient relief. This is not a willpower problem — it is an addiction cycle. What you're addicted to is not the work itself, but that gasp of air after fear lifts. Looking back, Fang Lin realized that nearly every "outstanding execution" during her peak years was a variation of this loop.</p>
+
+<hr>
+
+<h2>2.5 Why Fear Fails Long-Term</h2>
+
+<h3>Burnout</h3>
+
+<p>Maslach and Leiter's (1997) burnout model describes three core dimensions: emotional exhaustion, depersonalization, and reduced personal accomplishment. Fear-driven people are highly vulnerable on all three. Emotional exhaustion comes from sustained stress activation. Depersonalization comes from binding self-worth to performance metrics ("I'm not a person; I'm a KPI"). Reduced accomplishment comes from the "never enough" mindset — no matter how much is done, fear always locates the next insufficiency.</p>
+
+<h3>Creativity Suppression</h3>
+
+<p>Amabile's (1996) research on intrinsic motivation and creativity demonstrated that <strong>when people work because of external pressure, creative output drops significantly.</strong> Creativity requires psychological safe space: permission to err, to explore, to "waste" time on seemingly useless directions. Fear-driven people deny themselves this space. Every minute must be "productive," every attempt must be "safe." Under these constraints, you can produce efficient execution but are unlikely to produce genuine innovation.</p>
+
+<h3>Relationship Damage and Intergenerational Transmission</h3>
+
+<p>Fear is contagious — returning to Fang Lin's story, she didn't intentionally transmit anxiety to Xiao Zhou. Fear-driven managers unconsciously weaponize fear as a management tool: excessive micromanagement, zero tolerance for mistakes, manufactured urgency. Fear-driven parents unconsciously deploy fear as an educational method: overprotection, defining worth through grades, prohibiting failure. When team members fear punishment for mistakes, they don't stop making mistakes — they stop reporting them. Fear transmits across generations like an epidemic that needs no viral vector.</p>
+
+<h3>Health Costs</h3>
+
+<p>The health toll of long-term fear-driven operation isn't metaphorical — it is measurable. Large-scale epidemiological studies consistently confirm that chronic work stress significantly correlates with cardiovascular disease risk, chronic psychological stress impairs the immune system's inflammation-regulation capacity, and anxiety is among the strongest predictors of insomnia. Fang Lin's hyperthyroidism and arrhythmia weren't accidents. They were invoices. The energy fear-driven motivation provides is an advance — it borrows from future health at a punishing interest rate.</p>
+
+<hr>
+
+<h2>2.6 Counterargument: "Some People Thrive Under Pressure Their Entire Lives"</h2>
+
+<p>This is the most common objection. Everyone can name examples: an entrepreneur, an athlete, a scientist who worked under immense pressure for decades and never broke down. But three dimensions demand scrutiny.</p>
+
+<p><strong>First, survivorship bias.</strong> We see the people who survived fear-driven operation; we don't see the majority who burned out. It's like examining bullet holes on planes that returned from combat and concluding that wings are the most dangerous spot — when in fact, planes hit in the fuselage never made it back (Wald, 1943).</p>
+
+<p><strong>Second, attribution error.</strong> Did these people succeed <em>because of</em> fear, or <em>despite</em> it? If someone simultaneously possesses intense fear-driven motivation and exceptional talent, abundant resources, and uncommon luck, on what basis do we credit fear? Perhaps fear was drag, and talent kept them airborne in the headwind.</p>
+
+<p><strong>Third, the "successful but miserable" paradox.</strong> Fear-driven people may excel on external metrics while their internal experience is one of continuous tension and emptiness. You perpetually chase the next goal, not because you want it, but because you're terrified of what you'll find if you stop: that you might be nothing without the striving.</p>
+
+<hr>
+
+<h2>2.7 Reflective Exercise: Mapping Your Fears</h2>
+
+<p>This exercise isn't about eliminating fear — fear has evolutionary functions we'll revisit in Chapter 6. The purpose is to transform fear from an invisible puppeteer into an observable object.</p>
+
+<h3>Exercise 1: Fear Trigger Inventory</h3>
+
+<p>Take a sheet of paper and write down every fear currently driving your behavior. Don't censor, don't beautify, don't rank. Write until nothing remains. Common fears include: fear of being fired, fear of being looked down upon, fear of income decline, fear of falling behind peers, fear of disappointing parents, fear of being discovered as inadequate.</p>
+
+<h3>Exercise 2: Tracing Origins</h3>
+
+<p>For each fear on your list, ask two questions:</p>
+
+<p class='num-item'>1. <strong>When did this fear first appear?</strong> Some originate in childhood experiences, some in traumatic early-career events, some are absorbed unconsciously from culture and environment.</p>
+<p class='num-item'>2. <strong>Is this fear "mine," or is it someone else's luggage stored with me?</strong> Like Fang Lin, many fears don't stem from your own empirical judgment but from parental projections, social expectations, or peer comparisons. Your own fears need to be confronted; other people's fears need to be returned.</p>
+
+<h3>Exercise 3: Energy Audit</h3>
+
+<p>Estimate: of your total daily energy, what percentage goes to <strong>managing fear</strong>? Include anxious rumination (replaying the same bad scenario), preventive over-preparation (doing everything at 120% just in case), social performance (pretending everything is fine), and avoidance behavior (postponing opening the email that might contain bad news).</p>
+
+<p>If this percentage exceeds 30%, your internal engine needs a major fuel switch. That is exactly the path the remaining chapters of this book will explore.</p>
+
+<hr>
+
+<h2>2.8 Summary and Bridge</h2>
+
+<p>Fear is the oldest motivational system mammals bequeathed to us. It's fast, it's effective, and it doesn't require you to "figure out your why" before driving action. But its cost structure is asymmetric: short-term gains are purchased with long-term health, creativity, relationships, and inner fulfillment. More dangerously, it self-reinforces and transmits across generations — the longer fear drives you, the more fear-prone your brain becomes, and the harder it gets to switch to another motivational mode; and you may be passing that pattern to your subordinates and your children without even realizing it.</p>
+
+<p>But if fear is so inefficient long-term, why don't we "naturally" stop? Why can many people see fear consuming them yet remain unable to change? That is the question Chapter 3 will answer. Using the framework of "karmic inertia," we'll explore why <strong>fear patterns are so hard to break not for lack of will, but because behavioral patterns possess a self-perpetuating dynamic structure — what Eastern wisdom calls "karma" and Western psychology calls "habituation" and "path dependence."</strong></p>
+
+<hr>
+
+<h2>References</h2>
+
+<p class='num-item'>1. <strong>Goleman, D.</strong> (1995). <em>Emotional Intelligence: Why It Can Matter More Than IQ</em>. Bantam Books. ISBN: 978-0553383713 — Origin of the "amygdala hijack" concept; how emotion bypasses reason to drive behavior directly.</p>
+<p class='num-item'>2. <strong>LeDoux, J. E.</strong> (1996). <em>The Emotional Brain: The Mysterious Underpinnings of Emotional Life</em>. Simon & Schuster. ISBN: 978-0684836591 — Discovery of the thalamus→amygdala fast pathway; fear responses precede conscious awareness.</p>
+<p class='num-item'>3. <strong>Sapolsky, R. M.</strong> (2004). <em>Why Zebras Don't Get Ulcers</em> (3rd ed.). Holt Paperbacks. ISBN: 978-0805073690 — Neuroendocrine mechanisms of chronic stress; structural damage from long-term cortisol exposure to hippocampus and prefrontal cortex.</p>
+<p class='num-item'>4. <strong>Mullainathan, S., & Shafir, E.</strong> (2013). <em>Scarcity: Why Having Too Little Means So Much</em>. Times Books. ISBN: 978-0805092646 — The "cognitive bandwidth tax" concept: how scarcity captures cognitive capacity and degrades decision quality.</p>
+<p class='num-item'>5. <strong>Fredrickson, B. L.</strong> (2001). "The Role of Positive Emotions in Positive Psychology: The Broaden-and-Build Theory." <em>American Psychologist</em>, 56(3), 218–226. DOI: 10.1037/0003-066X.56.3.218 — Positive emotions broaden attentional and cognitive scope; negative emotions narrow it.</p>
+<p class='num-item'>6. <strong>Maslach, C., & Leiter, M. P.</strong> (1997). <em>The Truth About Burnout</em>. Jossey-Bass. ISBN: 978-0787908867 — Three-dimensional burnout model: emotional exhaustion, depersonalization, and reduced personal accomplishment.</p>
+<p class='num-item'>7. <strong>Amabile, T. M.</strong> (1996). <em>Creativity in Context</em>. Westview Press. ISBN: 978-0813330341 — The relationship between intrinsic motivation and creativity; external pressure significantly suppresses creative output.</p>
+
+<div class="ch-nav">
+  <a href="two-engines.html?lang=en">← Ch1: Two Engines</a>
+  <a href="inertia-of-karma.html?lang=en">Ch3: Inertia of Karma →</a>
+</div>
+</main>
+<script>
+mermaid.initialize({startOnLoad:true,theme:'dark',themeVariables:{primaryColor:'#7c3aed',primaryTextColor:'#fff',lineColor:'#8b949e',secondaryColor:'#1c2333'}});
+</script>
+</body>
+</html>
