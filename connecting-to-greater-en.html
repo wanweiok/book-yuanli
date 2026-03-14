@@ -1,340 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Ch9: Connecting to Greater | Aspiration: From Fear-Driven to Inner-Driven</title>
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 <style>
-:root{--bg:#0d1117;--bg2:#161b22;--bg3:#1c2333;--tx:#e6edf3;--tx2:#8b949e;--ac:#7c3aed;--ac2:#a78bfa;--bd:#30363d;--gn:#3fb950;--or:#d29922;--strong:#fff;--bq-bg:rgba(124,58,237,.08);--hover-bg:rgba(124,58,237,.06)}
-
-[data-theme="light"]{--bg:#f8f9fa;--bg2:#ffffff;--bg3:#e9ecef;--tx:#1a1a2e;--tx2:#495057;--ac:#6d28d9;--ac2:#5b21b6;--bd:#dee2e6;--gn:#198754;--or:#b45309;--strong:#0f0f23;--bq-bg:rgba(109,40,217,.06);--hover-bg:rgba(109,40,217,.04)}
-
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--tx);line-height:1.8;display:flex;min-height:100vh;transition:background .3s,color .3s}
-.side{width:260px;min-width:260px;background:var(--bg2);border-right:1px solid var(--bd);position:fixed;top:0;left:0;height:100vh;overflow-y:auto;z-index:100;transition:transform .3s,background .3s;padding:20px 0}
-.side-hd{padding:0 16px 16px;border-bottom:1px solid var(--bd);margin-bottom:8px}
-.side-hd h1{font-size:1.15rem;color:var(--ac2);letter-spacing:2px}
-.side-hd p{font-size:.72rem;color:var(--tx2);margin-top:3px}
-.toc a{display:block;padding:8px 16px;color:var(--tx2);text-decoration:none;font-size:.85rem;border-left:3px solid transparent;transition:all .2s}
-.toc a:hover,.toc a.cur{background:var(--bg3);color:var(--tx);border-left-color:var(--ac)}
-.side-bottom{padding:12px 16px;border-top:1px solid var(--bd);margin-top:8px;display:flex;flex-direction:column;gap:10px}
-.lang-sw{display:flex;gap:8px}
-.lang-sw a{padding:4px 12px;border-radius:4px;font-size:.78rem;text-decoration:none;color:var(--tx2);border:1px solid var(--bd);transition:all .2s}
-.lang-sw a.act{background:var(--ac);color:#fff;border-color:var(--ac)}
-.theme-toggle{display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 12px;border-radius:6px;border:1px solid var(--bd);background:var(--bg3);color:var(--tx2);font-size:.78rem;transition:all .2s;user-select:none}
-.theme-toggle:hover{border-color:var(--ac);color:var(--tx)}
-.theme-toggle .icon{font-size:1rem;line-height:1}
-.main{margin-left:260px;flex:1;max-width:820px;padding:36px 44px 100px;transition:margin .3s}
-h1{font-size:1.7rem;margin:28px 0 14px;color:var(--ac2);border-bottom:2px solid var(--bd);padding-bottom:8px}
-h2{font-size:1.3rem;margin:24px 0 10px;color:var(--tx)}
-h3{font-size:1.05rem;margin:18px 0 6px;color:var(--ac2)}
-p{margin:8px 0}
-hr{border:none;border-top:1px solid var(--bd);margin:24px 0}
-strong{color:var(--strong)}
-em{color:var(--ac2);font-style:italic}
-code{background:var(--bg3);padding:1px 5px;border-radius:3px;font-size:.86em;color:var(--or)}
-pre{background:var(--bg3);padding:14px;border-radius:7px;overflow-x:auto;margin:14px 0;border:1px solid var(--bd);transition:background .3s}
-pre code{background:none;padding:0;color:var(--tx);font-size:.83rem}
-a{color:var(--ac2)}
-.tbl{overflow-x:auto;margin:14px 0}
-table{width:100%;border-collapse:collapse;font-size:.88rem}
-th{background:var(--bg3);color:var(--ac2);padding:8px 12px;text-align:left;border-bottom:2px solid var(--ac);font-weight:600}
-td{padding:7px 12px;border-bottom:1px solid var(--bd)}
-tr:hover td{background:var(--hover-bg)}
-ul{margin:8px 0 8px 22px}
-li{margin:3px 0}
-li::marker{color:var(--ac)}
-blockquote{border-left:4px solid var(--ac);padding:10px 18px;margin:14px 0;background:var(--bq-bg);border-radius:0 7px 7px 0;color:var(--tx2);font-style:italic;transition:background .3s}
-.mermaid{background:var(--bg2);padding:18px;border-radius:9px;margin:18px 0;border:1px solid var(--bd);text-align:center;transition:background .3s}
-.ch-nav{display:flex;justify-content:space-between;margin-top:40px;padding-top:16px;border-top:1px solid var(--bd)}
-.ch-nav a{color:var(--ac2);text-decoration:none;padding:6px 14px;border:1px solid var(--bd);border-radius:5px;font-size:.88rem;transition:all .2s}
-.ch-nav a:hover{background:var(--bg3);border-color:var(--ac)}
-.ham{display:none;position:fixed;top:10px;left:10px;z-index:200;background:var(--bg2);border:1px solid var(--bd);color:var(--tx);padding:6px 10px;border-radius:5px;font-size:1.1rem;cursor:pointer;transition:background .3s}
-.num-item{margin:4px 0 4px 20px}
-@media(max-width:860px){.side{transform:translateX(-100%)}.side.open{transform:translateX(0)}.main{margin-left:0;padding:20px 16px 60px}.ham{display:block}h1{font-size:1.3rem}}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0d1117;font-family:-apple-system,"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;color:#e6edf3}
+.gate{background:#161b22;border:1px solid #30363d;border-radius:16px;padding:48px 40px;max-width:420px;width:90%;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.lock{font-size:3rem;margin-bottom:16px;filter:grayscale(.3)}
+.gate h1{font-size:1.3rem;color:#a78bfa;margin-bottom:6px;letter-spacing:1px}
+.gate p{font-size:.82rem;color:#8b949e;margin-bottom:28px}
+.input-wrap{position:relative;margin-bottom:16px}
+.input-wrap input{width:100%;padding:12px 16px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#e6edf3;font-size:1rem;outline:none;transition:border .2s}
+.input-wrap input:focus{border-color:#7c3aed}
+.btn{width:100%;padding:12px;border:none;border-radius:8px;background:linear-gradient(135deg,#7c3aed,#6d28d9);color:#fff;font-size:.95rem;cursor:pointer;font-weight:600;transition:opacity .2s}
+.btn:hover{opacity:.9}
+.btn:active{transform:scale(.98)}
+.err{color:#f85149;font-size:.82rem;margin-top:12px;min-height:20px;transition:opacity .3s}
+.err.hide{opacity:0}
+.loading{display:none;margin-top:12px;color:#8b949e;font-size:.82rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid #30363d;border-top-color:#7c3aed;border-radius:50%;animation:spin .6s linear infinite;vertical-align:middle;margin-right:6px}
 </style>
 </head>
 <body>
-<button class="ham" onclick="document.querySelector('.side').classList.toggle('open')">&#9776;</button>
-<nav class="side">
-  <div class="side-hd">
-    <h1>ASPIRATION</h1>
-    <p>Fear-Driven → Inner-Driven</p>
+<div class="gate">
+  <div class="lock">&#128274;</div>
+  <h1>Ch9: Connecting to Greater | Aspiration: From Fear-Driven to Inner-Driven</h1>
+  <p>This content is password protected</p>
+  <div class="input-wrap">
+    <input id="pw" type="password" placeholder="Enter password / 输入密码" autofocus
+           onkeydown="if(event.key==='Enter')unlock()">
   </div>
-  <div class="toc">
-<a href="preface.html?lang=en">00 Preface</a>
-<a href="two-engines.html?lang=en">01 Ch1: Two Engines</a>
-<a href="anatomy-of-fear.html?lang=en">02 Ch2: Anatomy of Fear</a>
-<a href="inertia-of-karma.html?lang=en">03 Ch3: Inertia of Karma</a>
-<a href="nature-of-aspiration.html?lang=en">04 Ch4: Nature of Aspiration</a>
-<a href="reactive-to-responsive.html?lang=en">05 Ch5: Reactive to Responsive</a>
-<a href="stress-paradox.html?lang=en">06 Ch6: The Stress Paradox</a>
-<a href="daily-practice.html?lang=en">07 Ch7: Daily Practice</a>
-<a href="aspiration-in-orgs.html?lang=en">08 Ch8: Aspiration in Orgs</a>
-<a href="connecting-to-greater.html?lang=en" class="cur">09 Ch9: Connecting to Greater</a>
-
-  </div>
-  <div class="side-bottom">
-    <div class="lang-sw">
-      <a href="connecting-to-greater.html?lang=zh" class="">中文</a>
-      <a href="connecting-to-greater.html?lang=en" class="act">English</a>
-    </div>
-    <button class="theme-toggle" onclick="toggleTheme()"><span class="icon">&#9728;</span><span class="label">浅色模式</span></button>
-  </div>
-</nav>
-<main class="main">
-<h1>Chapter 9: Connecting to Something Greater</h1>
-
-<p><strong>Core Question</strong>: Why does aspiration transcend personal goals? What is the source of meaning?</p>
-
-<hr>
-
-<h2>9.1 Opening: What the Dying Regret</h2>
-
-<p>Zhang Min has been a hospice volunteer for six years. Every Wednesday afternoon, she walks into a palliative care ward in Pudong, Shanghai, and sits with people in the final stage of life. Over six years, she has heard more than three hundred stories.</p>
-
-<p>She noticed a pattern. People at the end of life rarely regret achievements they failed to reach — the title they didn't earn, the apartment they didn't buy, the IPO that never happened. What they regret is almost always the same category of things: what they never attempted, what they never said to someone who mattered, the stretches of time when they lived according to someone else's script instead of their own. A retired corporate executive held Zhang Min's hand and said: "I spent forty years climbing to the top, only to find the ladder was leaning against the wrong wall."</p>
-
-<p>A former math teacher regretted not her salary but a single year when a quiet boy in her class came to her after school every day with questions, and she — rushing through the syllabus — brushed him off every time. The boy transferred schools. She never saw him again. "Those extra fifteen minutes," she said, "mattered more than every lesson I ever taught combined."</p>
-
-<p>Australian nurse Bronnie Ware (2012) documented the same finding in <em>The Top Five Regrets of the Dying</em>. The number-one regret: "I wish I'd had the courage to live a life true to myself, not the life others expected of me." Not "I wish I'd been more successful." Not "I wish I'd earned more money." But — I wish the life I lived had been mine. The remaining four regrets point equally toward relationships, emotional authenticity, and genuine presence. Not one is about numbers on a résumé.</p>
-
-<p>Zhang Min says that every time she walks out of the hospice, her understanding of "success" loosens a little. The dying do not fear death itself. They fear something deeper — <strong>discovering that they never truly lived</strong>.</p>
-
-<p>This is the question the final chapter must confront. The preceding eight chapters examined the structure, mechanisms, and practice of fear and aspiration. This chapter pursues the last "why": What does aspiration ultimately point toward? When all personal goals have been met, what remains?</p>
-
-<hr>
-
-<h2>9.2 The Ceiling of Self-Interest</h2>
-
-<h3>The Hedonic Treadmill</h3>
-
-<p>Pure self-improvement is a dead end. You can become more efficient, more disciplined, more competitive — but at some point, you inevitably collide with a question: <strong>improve yourself for what?</strong></p>
-
-<p>This is not rhetorical. Psychological research has revealed the phenomenon of <strong>hedonic adaptation</strong>: people rapidly return to baseline happiness after positive experiences. The thrill of a promotion lasts two weeks. The satisfaction of a new car fades within a month. The pleasure of a year-end bonus doesn't survive the quarter. Large-scale survey data further confirms that once basic needs are met, income growth produces virtually no improvement in day-to-day emotional experience. Achievement is like mileage on a treadmill — the numbers climb, but your position hasn't changed.</p>
-
-<p>This is the "treadmill metaphor" from Chapter 1 recurring at a deeper level. Chapter 1 described fear-driven motivation as a treadmill with fire at your back. Now we discover that even when the goal is reframed as positive — more money, a higher title, a better physique — if the driving force remains self-centered, the treadmill effect does not vanish. You have simply upgraded to a more elegant treadmill.</p>
-
-<h3>Self-Transcendence: Maslow's Hidden Peak</h3>
-
-<p>Maslow revised his most famous theory late in life. In a 1969 paper, he proposed that the pinnacle of the needs hierarchy is not self-actualization but <strong>self-transcendence</strong> — an experience of connection beyond individual boundaries with something larger. Self-actualization asks "what can I become?"; self-transcendence asks "what can I serve?"</p>
-
-<p>This revision was widely omitted from later textbooks. But Koltko-Rivera (2006), after re-examining Maslow's unpublished manuscripts, confirmed its significance: personal growth that does not lead toward something beyond the personal collapses at the top into emptiness. Once a self-actualizer has "actualized," they face a crisis — then what? The only path through that crisis is to turn one's gaze from the self to beyond the self.</p>
-
-<h3>Frankl: Finding Meaning in Extremity</h3>
-
-<p>Frankl (1946), observing the extreme conditions of Nazi concentration camps, found the same pattern. Among people enduring equally brutal circumstances, the difference between those who survived and those who gave up was not physical strength or willpower — it was <strong>whether they felt their existence still mattered to someone or something</strong>. A person who was still awaited by a loved one, who still had an unfinished manuscript, who still had words left to say — that person's odds of survival were measurably higher.</p>
-
-<p>He developed this insight into the core thesis of logotherapy: meaning cannot be manufactured; it can only be discovered through engaged interaction with the world. You cannot sit in a room and "think up" the meaning of life — you must encounter it in action. This aligns closely with the definition of aspiration in Chapter 4: aspiration is not a goal that is thought up but a direction that emerges through contact with the world.</p>
-
-<h3>Meaning vs Happiness</h3>
-
-<p>Seligman's (2011) PERMA model of well-being makes a crucial distinction: Pleasure, Engagement, Relationships, Meaning, and Accomplishment are five different sources of flourishing. Pleasure depends on stimulation and decays fastest. Engagement depends on flow states — more durable than pleasure, but still requiring fresh challenges. <strong>Meaning is the most enduring of the five</strong>, because its satisfaction comes not from the intensity of personal experience but from the felt connection between the individual and a larger system.</p>
-
-<p>A person can experience meaning amid suffering (such as caring for a sick parent), but cannot experience pleasure amid suffering. Meaning withstands the test of hardship. Pleasure does not.</p>
-
-<hr>
-
-<h2>9.3 Three Sources of Meaning</h2>
-
-<p>If meaning cannot be achieved through self-improvement alone, where does it come from? Synthesizing Eastern and Western wisdom traditions alongside modern psychology, meaning is discovered through three primary pathways.</p>
-
-<h3>Craft: Through Mastery and Contribution</h3>
-
-<p>Sennett (2008), in <em>The Craftsman</em>, describes a particular kind of satisfaction: it comes from doing something well — not for reward, but because the skill itself deserves to be taken seriously. Jiro Ono, the legendary sushi master, continued to stand behind the same counter past ninety years of age — not for lack of money, but because he believed "there is still room for improvement."</p>
-
-<p>The key to craft-based meaning is not what you do but <strong>the depth of your engagement</strong>. A carpenter fully absorbed in restoring an ancient building and an engineer fully absorbed in debugging an algorithm experience structurally identical meaning. Both point to the same thing: genuine contact between one's capability and the world's need. When skill level precisely matches challenge difficulty, a person enters a state of total absorption where self-consciousness temporarily dissolves — this flow experience is itself a vessel of meaning.</p>
-
-<h3>Service: Through Care for Others</h3>
-
-<p>Batson's (1991) empathy-altruism hypothesis demonstrates that when people genuinely perceive another's need, they generate a helping motivation that is not self-centered. This is not "helping others makes me feel good" (which is still self-interested), but "your suffering matters to me because you matter to me." Through a series of carefully designed experiments, he ruled out egoistic explanations, showing that purely altruistic motivation genuinely exists — one of the most irreducible aspects of human nature.</p>
-
-<p>The Buddhist tradition of compassion (karuṇā) treats this capacity as a natural consequence of developing awareness. When fear no longer monopolizes your attention (the amygdala hijack discussed in Chapter 2), you begin to see others — not as competitors or instruments, but as beings who struggle and are vulnerable just as you are. The core of the bodhisattva path is not self-sacrifice but an expansion of perspective: <strong>your boundary does not end at your skin.</strong></p>
-
-<h3>Witness: Through Full Presence</h3>
-
-<p>The third source of meaning is the least intuitive and most easily overlooked: <strong>doing nothing, but being completely present.</strong> Zen calls this "shikantaza" (just sitting). Wang Wei captured the quality in his couplet "Empty mountain, no one in sight / yet human voices are heard" — meaning resides not in what you do to the world but in whether you truly see it.</p>
-
-<p>Heidegger used "Dasein" to describe the fundamental character of human existence: we do not merely live; we know that we live. This awareness is itself a source of meaning.</p>
-
-<p>I know a retired physics teacher. Every morning he wakes at five, not to exercise, but to go up to the rooftop and watch the sky brighten. He says he has been doing this for thirty years, and no two sunrises have ever been the same. Someone asked him what the point was. He thought for a moment and said: "No point. It's just beautiful." In that moment I realized that perhaps "beautiful" is itself one of the deepest forms of meaning — needing no explanation, no utilization, no service to any goal.</p>
-
-<p>This is not idleness — it is a highly focused receptivity that requires you to suspend judgment, suspend planning, suspend the habitual "what should I do next" thinking, and fully allow this moment into your awareness. This is the deepest expression of Chapter 5's shift "from reactive to responsive."</p>
-
-<h3>Where the Three Converge</h3>
-
-<p>These three pathways are not mutually exclusive. Most people find meaning in some blend of all three. A physician may simultaneously experience the satisfaction of craft (surgical precision), the fulfillment of service (relieving a patient's suffering), and the depth of witness (being present for life at its most fragile and resilient). Zhang Min's work at the hospice is itself an example of convergence — she has no medical skills to offer, but her presence (witness), her listening (service), and her six years of accumulated companionship skills (craft) constitute a complete experience of meaning.</p>
-
-<div class="mermaid">graph TD
-    C["🔧 Craft<br/>Mastery & Contribution"]
-    S["🤝 Service<br/>Care & Action"]
-    W["👁 Witness<br/>Presence & Awareness"]
-    
-    C --- CS["Craft × Service<br/>Skill in service of others"]
-    C --- CW["Craft × Witness<br/>Deep attention as practice"]
-    S --- SW["Service × Witness<br/>Accompaniment as help"]
-    
-    CS --- CENTER["Aspiration<br/>Where the three converge"]
-    CW --- CENTER
-    SW --- CENTER
-
-    style CENTER fill:#8e44ad,color:#fff,stroke:#6c3483,stroke-width:2px
-    style C fill:#2980b9,color:#fff
-    style S fill:#27ae60,color:#fff
-    style W fill:#e67e22,color:#fff</div>
-
-<p>Aspiration — the "inner directional force" defined in Chapter 4 — is the convergence of these three pathways. <strong>It channels personal energy toward goals that transcend the personal, without detaching from genuine personal experience.</strong> Craft gives aspiration a solid vehicle; service calibrates its direction; witness gives it the quality of non-attachment. Remove any one of the three and aspiration easily degrades: aspiration without craft is fantasy, aspiration without service is narcissism, aspiration without witness is anxiety.</p>
-
-<p>But a danger must be confronted here. Talk of meaning, transcendence, three sources — if any of this becomes a sophisticated script for avoiding real-world problems, it is not aspiration but "spiritual bypassing." When "everything happens for a reason" becomes a passive excuse in the face of injustice, when "let go of attachment" becomes a reason for inaction — meaning frameworks are being abused. But genuine aspiration is the opposite of withdrawal; it is deeper engagement. Martin Luther King Jr.'s civil rights movement was not spiritual bypassing. Gandhi's nonviolent resistance was not spiritual bypassing. These were aspiration's most powerful expressions at the societal level. The test is simple: <strong>Does it decrease your contact with the world, or increase it?</strong> Aspiration without action is fantasy; action without aspiration is exhaustion.</p>
-
-<hr>
-
-<h2>9.4 Aspiration and Mortality</h2>
-
-<p>No serious discussion of meaning can avoid death. Not because death is frightening, but because it is the ultimate test of meaning: if life were infinitely long, anything could be infinitely postponed, and the question "what matters?" would lose its urgency.</p>
-
-<h3>Being-Toward-Death</h3>
-
-<p>Heidegger, in <em>Being and Time</em> (1927), introduced the concept of "Being-toward-death" (Sein-zum-Tode): only when a person genuinely confronts the fact of their own mortality can they see clearly what matters. Death is not the negation of life but its boundary — and it is precisely because there is a boundary that the content acquires shape. Most people, most of the time, live in what Heidegger called the mode of "das Man" (the They): doing what others do, thinking what others think, running the social script. Death awareness breaks through this numbness — it transforms "what do I actually want?" from an abstract question into an urgent one.</p>
-
-<p>Steve Jobs, in his 2005 Stanford commencement address, said: "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life. Because almost everything — all external expectations, all pride, all fear of embarrassment or failure — these things just fall away in the face of death, leaving only what is truly important."</p>
-
-<h3>Impermanence as Liberation</h3>
-
-<p>The Buddhist understanding of death goes further. Impermanence (anicca) is not bad news — it is liberation. If everything were permanent, change would be impossible, growth would have no room, and no single moment would be precious, because infinitely many identical moments would follow. It is precisely because this moment will pass that it deserves to be fully lived. The Tibetan Buddhist practice of "death meditation" and the Stoic tradition's "memento mori" convey the same message: <strong>accepting finitude is the precondition for living a full life.</strong></p>
-
-<h3>The Two Faces of Death Awareness</h3>
-
-<p>But death awareness is a double-edged sword. Greenberg, Solomon, and Pyszczynski (1997), in Terror Management Theory, found through hundreds of experiments that when mortality is made salient, people exhibit two sharply different responses. One is <strong>defensive</strong>: clinging to cultural belief systems, rejecting outsiders, pursuing material security — essentially using fear to fight fear. The other is <strong>growth-oriented</strong>: re-examining life priorities, deepening connections with others, pursuing more meaningful goals.</p>
-
-<p>The variable that determines which response emerges is precisely what this book has been discussing throughout: <strong>whether your underlying operating system runs on fear or aspiration.</strong> If the base layer is fear, mortality awareness intensifies fear. If the base layer is aspiration, mortality awareness purifies and focuses aspiration — you more decisively release what doesn't matter. Death is not a threat. It is a compass.</p>
-
-<hr>
-
-<h2>9.5 The Paradox of Letting Go</h2>
-
-<p>Here is a seemingly contradictory finding: <strong>aspiration is most powerful when held lightly.</strong></p>
-
-<h3>Wu Wei: Not Doing Nothing, but Not Forcing</h3>
-
-<p>Zhuangzi's concept of wu wei does not mean "do nothing." It means "do not force." When action aligns naturally with one's nature and the situation, the resulting force far exceeds deliberate effort. Cook Ding did not carve the ox because he swung the blade harder than anyone else, but because his understanding of the ox's structure had become so deep it no longer required conscious thought. "He perceived with his spirit rather than looked with his eyes" — a mastery beyond technique, an effort beyond effort.</p>
-
-<p>Attachment to outcomes — even good outcomes — reintroduces fear. A writer who ties self-worth to each book's sales transforms writing from exploration into performance. A doctor who carries every patient's fate on her shoulders will find her clinical judgment eroded by anxiety. The true craftsman cares deeply about quality but is not destroyed by any single failure — because he serves the craft itself, not the self-validation the craft provides.</p>
-
-<p>Act without clinging — commit fully, but do not treat the outcome as an extension of the self. This is the deepest principle underlying the "daily practice" of Chapter 7, and the secret of why aspiration can sustain itself over a lifetime without degrading into anxiety.</p>
-
-<hr>
-
-<h2>9.6 The Aspiration Behind This Book</h2>
-
-<p>This book began with an observation during a conversation: some people's driving force is like fire — it illuminates the path but also burns them; others' driving force is like water — quiet but enduring. After that conversation, I spent a long time reviewing my own life — which decisions were pushed by fear, and which were pulled by an inarticulate sense of "this is what I should be doing." The answers made me uncomfortable. But it was precisely that discomfort that became the first aspiration behind writing this book.</p>
-
-<p>Nine chapters have been spent disassembling the difference between fear and aspiration. Fear-driven motivation is a treadmill (Chapter 1) with precise physiological machinery (Chapter 2) and deep behavioral inertia (Chapter 3). Aspiration-driven motivation is a different engine (Chapter 4) that requires shifting from reactive to responsive (Chapter 5), reframing stress (Chapter 6), practicing daily micro-shifts (Chapter 7), and scaling to organizations (Chapter 8). Finally, we found that aspiration's deepest root lies not within the self but in the connection between self and world — through craft, through service, through witnessing existence itself.</p>
-
-<p>The choice is not between success and meaning. The choice is between fear-driven success and aspiration-driven success. The former makes you run fast but never feel fast enough. The latter may carry you more slowly, but every step lands on solid ground.</p>
-
-<hr>
-
-<h2>9.7 Reflective Exercise: What Is Your Aspiration?</h2>
-
-<p>This is the final exercise of the book — and the most important one.</p>
-
-<p>Write a letter to yourself from thirty years in the future. Not a plan. Not a goal list. A letter. Imagine that person has already lived through the next thirty years of your life. They look back at you now — at the choices you're agonizing over, the things you fear, the decisions you're hesitating to make.</p>
-
-<p>Write two paragraphs:</p>
-
-<p><strong>Paragraph one: What does that person want you to know?</strong> About what truly matters. About what happened with all those things you're afraid of right now. About what you're underestimating and what you're overestimating. About which things that seem enormous right now turned out to be trivial, and which things that seem trivial right now turned out to be your most precious memories.</p>
-
-<p><strong>Paragraph two: What does that person thank you for?</strong> For having the courage, right now, to do something, say something, choose something — even though you were afraid. For choosing, at some critical juncture, not the safe path but the one you actually wanted to walk.</p>
-
-<p>Don't aim for the "right answer." The act of writing is itself a conversation with your aspiration. You may discover that the person thirty years from now is far more forgiving than you expected — and cares far more about the small things you currently dismiss as "unimportant."</p>
-
-<hr>
-
-<h2>9.8 Closing</h2>
-
-<p>Aspiration does not need to be declared loudly. It only asks that on each ordinary morning, you quietly choose: today, what am I setting out for?</p>
-
-<hr>
-
-<h2>References</h2>
-
-<p class='num-item'>1. <strong>Ware, B.</strong> (2012). <em>The Top Five Regrets of the Dying: A Life Transformed by the Dearly Departing</em>. Hay House. — A hospice nurse's field observations on the five most common life regrets; a classic in meaning research.</p>
-<p class='num-item'>2. <strong>Maslow, A. H.</strong> (1969). "The Farther Reaches of Human Nature." <em>Journal of Transpersonal Psychology</em>, 1(1), 1–9. — Maslow's late-life revision placing self-transcendence above self-actualization.</p>
-<p class='num-item'>3. <strong>Koltko-Rivera, M. E.</strong> (2006). "Rediscovering the Later Version of Maslow's Hierarchy of Needs." <em>Review of General Psychology</em>, 10(4), 302–317. — Re-examination of Maslow's unpublished manuscripts confirming the theoretical significance of self-transcendence.</p>
-<p class='num-item'>4. <strong>Frankl, V. E.</strong> (1946). <em>Man's Search for Meaning</em>. Beacon Press. — Foundational work of logotherapy: meaning is discovered through engaged interaction with the world.</p>
-<p class='num-item'>5. <strong>Seligman, M. E. P.</strong> (2011). <em>Flourish: A Visionary New Understanding of Happiness and Well-being</em>. Free Press. — The PERMA model distinguishing five dimensions of well-being: Pleasure, Engagement, Relationships, Meaning, Accomplishment.</p>
-<p class='num-item'>6. <strong>Sennett, R.</strong> (2008). <em>The Craftsman</em>. Yale University Press. — The relationship between craft and meaning: mastery as a deep source of satisfaction.</p>
-<p class='num-item'>7. <strong>Batson, C. D.</strong> (1991). <em>The Altruism Question: Toward a Social-Psychological Answer</em>. Lawrence Erlbaum Associates. — Experimental evidence for the empathy-altruism hypothesis and genuinely altruistic motivation.</p>
-<p class='num-item'>8. <strong>Heidegger, M.</strong> (1927). <em>Sein und Zeit</em> [Being and Time]. Max Niemeyer Verlag. — "Being-toward-death" and "Dasein": finitude as the precondition for meaning.</p>
-<p class='num-item'>9. <strong>Greenberg, J., Solomon, S., & Pyszczynski, T.</strong> (1997). "Terror Management Theory of Self-Esteem and Cultural Worldviews." <em>Advances in Experimental Social Psychology</em>, 29, 61–139. — Terror Management Theory: the defensive and growth-oriented dual responses to mortality awareness.</p>
-
-<div class="ch-nav">
-  <a href="aspiration-in-orgs.html?lang=en">← Ch8: Aspiration in Orgs</a>
-  <span></span>
+  <button class="btn" onclick="unlock()">Unlock / 解锁</button>
+  <div class="err hide" id="err">Password incorrect / 密码错误</div>
+  <div class="loading" id="loading"><span class="spinner"></span>Decrypting...</div>
 </div>
-</main>
 
 <script>
-(function(){
-  var saved = localStorage.getItem('yuanli-theme');
-  if(saved) document.documentElement.setAttribute('data-theme', saved);
-  else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
-    document.documentElement.setAttribute('data-theme', 'light');
-})();
-function toggleTheme(){
-  var el = document.documentElement;
-  var cur = el.getAttribute('data-theme');
-  var next = cur === 'light' ? 'dark' : 'light';
-  el.setAttribute('data-theme', next);
-  localStorage.setItem('yuanli-theme', next);
-  updateToggleBtn();
-  reinitMermaid(next);
-}
-function updateToggleBtn(){
-  var btns = document.querySelectorAll('.theme-toggle');
-  var isLight = document.documentElement.getAttribute('data-theme') === 'light';
-  btns.forEach(function(b){
-    b.querySelector('.icon').textContent = isLight ? '\u263E' : '\u2600';
-    b.querySelector('.label').textContent = isLight ? '\u6DF1\u8272\u6A21\u5F0F' : '\u6D45\u8272\u6A21\u5F0F';
-  });
-}
-function reinitMermaid(theme){
-  if(typeof mermaid === 'undefined') return;
-  var isDark = theme !== 'light';
-  mermaid.initialize({
-    startOnLoad: false,
-    theme: isDark ? 'dark' : 'default',
-    themeVariables: isDark
-      ? {primaryColor:'#7c3aed',primaryTextColor:'#fff',lineColor:'#8b949e',secondaryColor:'#1c2333'}
-      : {primaryColor:'#6d28d9',primaryTextColor:'#1a1a2e',lineColor:'#495057',secondaryColor:'#e9ecef'}
-  });
-  document.querySelectorAll('.mermaid').forEach(function(el){
-    var code = el.getAttribute('data-mermaid');
-    if(!code) return;
-    el.removeAttribute('data-processed');
-    el.innerHTML = code;
-  });
-  mermaid.run();
-}
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.mermaid').forEach(function(el){
-    el.setAttribute('data-mermaid', el.textContent.trim());
-  });
-  var theme = document.documentElement.getAttribute('data-theme') || 'dark';
-  var isDark = theme !== 'light';
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: isDark ? 'dark' : 'default',
-    themeVariables: isDark
-      ? {primaryColor:'#7c3aed',primaryTextColor:'#fff',lineColor:'#8b949e',secondaryColor:'#1c2333'}
-      : {primaryColor:'#6d28d9',primaryTextColor:'#1a1a2e',lineColor:'#495057',secondaryColor:'#e9ecef'}
-  });
-  updateToggleBtn();
-});
-</script>
+var ENC = {
+  salt: "0cTXW5fT0B9Y3WZ9Oux1Rg==",
+  iv:   "tyxnaFi7ejW/NFmL",
+  ct:   "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"
+};
+var ITER = 100000;
 
+function b64decode(s) {
+  var bin = atob(s), arr = new Uint8Array(bin.length);
+  for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+  return arr;
+}
+
+async function deriveKey(pw, salt) {
+  var enc = new TextEncoder();
+  var km = await crypto.subtle.importKey("raw", enc.encode(pw), "PBKDF2", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey(
+    { name: "PBKDF2", salt: salt, iterations: ITER, hash: "SHA-256" },
+    km,
+    { name: "AES-GCM", length: 256 },
+    false,
+    ["decrypt"]
+  );
+}
+
+async function tryDecrypt(pw) {
+  var salt = b64decode(ENC.salt);
+  var iv   = b64decode(ENC.iv);
+  var ct   = b64decode(ENC.ct);
+  var key  = await deriveKey(pw, salt);
+  var dec  = await crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, key, ct);
+  return new TextDecoder().decode(dec);
+}
+
+async function unlock() {
+  var pw = document.getElementById("pw").value;
+  if (!pw) return;
+  var errEl = document.getElementById("err");
+  var loadEl = document.getElementById("loading");
+  errEl.classList.add("hide");
+  loadEl.style.display = "block";
+  try {
+    var html = await tryDecrypt(pw);
+    sessionStorage.setItem("book-pw", pw);
+    document.open();
+    document.write(html);
+    document.close();
+  } catch(e) {
+    loadEl.style.display = "none";
+    errEl.classList.remove("hide");
+    document.getElementById("pw").select();
+  }
+}
+
+(async function() {
+  var cached = sessionStorage.getItem("book-pw");
+  if (!cached) return;
+  try {
+    var html = await tryDecrypt(cached);
+    document.open();
+    document.write(html);
+    document.close();
+  } catch(e) {
+    sessionStorage.removeItem("book-pw");
+  }
+})();
+</script>
 </body>
 </html>
